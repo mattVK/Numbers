@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsjpvnhkbjt8o"]
+
+[ext_resource type="Script" path="res://operand_container.gd" id="1_fcyn2"]
+[ext_resource type="Texture2D" uid="uid://balar8xoasnoo" path="res://BorderOperand.png" id="2_4wid1"]
+
+[node name="OperandContainer" type="Control"]
+clip_contents = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fcyn2")
+
+[node name="NumberText" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -12.0
+offset_right = 25.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+tooltip_text = "NUM"
+bbcode_enabled = true
+text = "[center]NUM[/center]"
+fit_content = true
+scroll_active = false
+
+[node name="HitBox" type="TextureRect" parent="."]
+z_index = -1
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_4wid1")

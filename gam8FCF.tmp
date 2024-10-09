@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnxwrcfafu233"]
+
+[ext_resource type="Script" path="res://game_ui.gd" id="1_gnacs"]
+[ext_resource type="PackedScene" uid="uid://28wgm1weivl0" path="res://formula_operand_container.tscn" id="2_i53s6"]
+[ext_resource type="PackedScene" uid="uid://cgnx5x0gfdryu" path="res://formula_operator_container.tscn" id="3_tn8pb"]
+
+[node name="GameUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gnacs")
+
+[node name="MainContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="RolledNumberText" type="RichTextLabel" parent="MainContainer"]
+layout_mode = 2
+text = "ROLL: "
+fit_content = true
+
+[node name="RollButton" type="Button" parent="MainContainer"]
+layout_mode = 2
+text = "ROLL"
+
+[node name="Operands" type="HBoxContainer" parent="MainContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Formula" type="HBoxContainer" parent="MainContainer"]
+layout_mode = 2
+
+[node name="FormulaOperandContainer" parent="MainContainer/Formula" instance=ExtResource("2_i53s6")]
+layout_mode = 2
+
+[node name="FormulaOperatorContainer" parent="MainContainer/Formula" instance=ExtResource("3_tn8pb")]
+layout_mode = 2
+
+[node name="FormulaOperandContainer2" parent="MainContainer/Formula" instance=ExtResource("2_i53s6")]
+layout_mode = 2
+
+[node name="Operators" type="HBoxContainer" parent="MainContainer"]
+layout_mode = 2
